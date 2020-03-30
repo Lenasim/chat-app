@@ -2,16 +2,16 @@ import React from "react"
 import './Contact.css';
 
 
-const Contact = ({ name, avatar, online }) => {
+const Contact = props => {
     return (
         <div className="Contact">
-            <img className="avatar" src={avatar} />
+            <img className="avatar" src={props.avatar} />
             <div>
-            <div className="name">{name}</div>
+            <div className="name">{props.name}</div>
 
             <div className="status">
-                <div className={`status-${online ? 'online' : 'offline'}`}></div>
-                <div className="status-text">{online ? 'online' : 'offline'}</div>
+                <div className={`status-${props.online ? 'online' : 'offline'}`}></div>
+                <div className="status-text">{props.online ? 'online' : 'offline'}</div>
             </div>
             </div>
         </div >
