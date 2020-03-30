@@ -1,7 +1,3 @@
-import React from "react"
-import './App.css';
-
-
 const users = [
     {
       name: 'Robert Reyes',
@@ -30,4 +26,4 @@ const users = [
     }
   ];
 
-export default ContactList
+export default users
