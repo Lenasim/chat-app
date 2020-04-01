@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contact from './components/Contact';
+import ContactList from './components/ContactList';
 import './App.css';
 
 
@@ -24,14 +24,17 @@ const Charlie = {
 
 
 class App extends Component {
+  state = {
+    online = false;
+  }
+  userStatus = () =>{
+    this.setState(current => ({ online: !current.online }))
+  }
   render() {
-    return (
-      <div>
-        <Contact {...Marion} />
-        <Contact {...Katrina} />
-        <Contact {...Charlie} />
-      </div>
-    );
+    <div>
+      <ContactList />
+
+    </div>
   }
 }
 
