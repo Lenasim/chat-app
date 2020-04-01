@@ -1,6 +1,8 @@
 import React from "react";
 import Contact from "./Contact";
 
+
+function ContactList() {
 const users = [
   {
     name: "Robert Reyes",
@@ -29,7 +31,7 @@ const users = [
   }
 ];
 
-function ContactList() {
+
   return users.map(user => <Contact {...user} key={user.name} />);
 }
 
