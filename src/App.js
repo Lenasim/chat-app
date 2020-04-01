@@ -1,19 +1,10 @@
-import React, { Component } from 'react';
-import Contact from './components/Contact';
-import users from './components/ContactList';
-import './App.css';
-
-function Users() {
-  return users.map(user => <Contact {...user} />)
-}
+import React from "react";
+import ContactList from "./components/ContactList";
+import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        {Users()}
-      </div>
-    );
+    return <div><ContactList /></div>;
   }
 }
 
